@@ -8,7 +8,7 @@ class Profile extends React.Component {
         super(props);
         this.state = {
             username: "user12039812093",
-            profilePic: "https://gooddoggies.online/wp-content/uploads/2020/06/5-Tips-To-Training-A-Labrador-Puppy-1.jpg.",
+            profilePicUrl: "https://gooddoggies.online/wp-content/uploads/2020/06/5-Tips-To-Training-A-Labrador-Puppy-1.jpg.",
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -25,16 +25,18 @@ class Profile extends React.Component {
     render() {
         return(
             <div className="profile">
-                <h1> {this.username} Username </h1>
-                <Avatar className="profile__picture" src={this.profilePic} />
-
+                <h1> {this.props.username} Username </h1>
+                <Avatar className="profile__picture" 
+                src={this.props.profilePicUrl} 
+                />
                 <form onSubmit={this.handleSubmit}>
                     <span> 
-                        <h3> Username: <input type="text" value={this.state.username} onChange={this.handleChange} /> </h3>
+                        <h3> Username: 
+                            <input type="text" value={this.state.username} onChange={this.handleChange} />
+                            <input type="submit" value="Submit" />
+                        </h3>
                     </span>
-                    <input type="submit" value="Submit" />
                 </form>
-
             </div>
         )
     }
