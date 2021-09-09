@@ -13,6 +13,10 @@ function App() {
     <div className="App">
       <Router>
         <Switch>
+        <Route path="/profile">
+             <Header />
+             <Profile />
+          </Route>
           <Route path="/chat/:person">
             <Header backButton="/chat" />
             <ChatScreen/>
@@ -25,10 +29,6 @@ function App() {
             <Header />
             <TinderCards />
             <SwipeButtons />
-          </Route>
-          <Route path="/profile">
-             <Header />
-             <Profile />
           </Route>
         </Switch>
       </Router>
