@@ -32,9 +32,6 @@ function TinderCards() {
               className="card"
             >
               <h3>{person.name}</h3>
-              <div className="description">
-              // I imagine we'd want to put the: brand, size, condition, description, etc. here
-            </div>
             </div>
           </TinderCard>
         ))}

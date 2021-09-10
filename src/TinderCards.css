@@ -16,10 +16,6 @@
     color: white;
 }
 
-.card .description {
-    /* requires styling here, preferably make it smaller than the .card h3 */
-}
-
 .tinderCards__cardContainer {
     display: flex;
     justify-content: center;

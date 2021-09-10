@@ -1,11 +1,9 @@
 import React from "react";
 import "./profile.css";
 import Avatar from "@material-ui/core/Avatar";
-import "./Material UI components/Textfield"
-import { Link } from "react-router-dom";
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
-
+import Wardrobe from './Wardrobe.js'
 
 class Profile extends React.Component {
     constructor(props) {
@@ -13,6 +11,7 @@ class Profile extends React.Component {
         this.state = {
             username: "user12039812093",
             profilePicUrl: "https://gooddoggies.online/wp-content/uploads/2020/06/5-Tips-To-Training-A-Labrador-Puppy-1.jpg.",
+            userID: 0,
         }
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -47,6 +46,7 @@ class Profile extends React.Component {
                             Save
                         </Button>
                     </span>
+                    <Wardrobe />
             </div>
         )
     }
