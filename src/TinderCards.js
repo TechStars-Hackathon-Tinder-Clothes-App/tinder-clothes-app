@@ -32,7 +32,7 @@ function TinderCards() {
               className="card"
             >
               <h3>{person.name}</h3>
-              <div style={{position: `absolute`, paddingBottom: `5%`, bottom: `-60%`}}>
+              <div style={{position: `absolute`, paddingBottom: `5%`, opacity: "0.9", bottom: `-60%`, backgroundColor: "grey", borderRadius: "4px", padding: "5px", marginBottom: "3%"}}>
                 <p className="row">
                 <h4 style={{display: "inline-block"}}>
                   Description:
