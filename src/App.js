@@ -32,8 +32,10 @@ const customStyles = {
 
 function App() {
   const [modalIsOpen, setIsOpen] = React.useState(false);
+  const [currentMatch, setCurrentMatch] = React.useState("Vivien");
 
-  function openModal() {
+  function openModal(person) {
+    setCurrentMatch(person);
     setIsOpen(true);
   }
 
@@ -70,6 +72,7 @@ function App() {
               onRequestClose={closeModal}
               style={customStyles}
               contentLabel="Example Modal"
+              appElement={document.getElementById('App')}
             >
               <Typography
                 style={{ width: "100%", justifyContent: "center", marginTop: "2%" }}
@@ -77,19 +80,19 @@ function App() {
                 component="h2"
                 gutterBottom
               >
-                You matched with John!
+                You matched with {currentMatch.name}!
               </Typography>
               <Paper style={{flexDirection:"row", display:"flex", marginTop: "5%", marginBottom: "5%", justifyContent:"center"}} elevation={0}>
                 <ReactRoundedImage
                   style={{ backgroundColor: "red", marginRight: "20%" }}
                   roundedSize="0"
-                  image={"https://i.imgur.com/0tgFHtJ.jpeg"} 
+                  image={"https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/425208/item/goods_00_425208.jpg?width=734"} 
                 />
                 <div style={{width:"5%"}}/>
                 <ReactRoundedImage
                   style={{ backgroundColor: "red" }}
                   roundedSize="0"
-                  image={"https://i.imgur.com/4F4Y7RJ.jpeg"}
+                  image={currentMatch.url}
                 />
               </Paper>
 

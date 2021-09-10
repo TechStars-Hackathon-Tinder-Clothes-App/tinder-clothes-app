@@ -6,10 +6,9 @@ import database from "./firebase";
 function TinderCards(props) {
   const [people, setPeople] = useState([]);
 
-  const onSwipe = (direction) => {
-    console.log('You swiped: ' + direction)
+  const onSwipe = (direction, person) => {
     if (direction === "right") {
-      props.handleOpenModal();
+      props.handleOpenModal(person);
     }
   }
 
@@ -33,7 +32,9 @@ function TinderCards(props) {
             className="swipe"
             key={person.name}
             preventSwipe={["up", "down"]}
-            onSwipe={onSwipe}
+            onSwipe={(direction) => {
+              onSwipe(direction, person);
+            }}
           >
             <div
               style={{ backgroundImage: `url(${person.url})`, overflowY: "scroll", overflowWrap: "break-word" }}
