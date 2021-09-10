@@ -8,14 +8,14 @@ const ChatScreen = () => {
     {
       name: "Labrador",
       image:
-        "https://gooddoggies.online/wp-content/uploads/2020/06/5-Tips-To-Training-A-Labrador-Puppy-1.jpg",
+        "",
       message: "Hey",
     },
     {
       name: "Labrador",
       image:
-        "https://gooddoggies.online/wp-content/uploads/2020/06/5-Tips-To-Training-A-Labrador-Puppy-1.jpg",
-      message: "Bork bork bork",
+        "",
+      message: "what's up?",
     },
     {
       message: "yo",
@@ -30,7 +30,7 @@ const ChatScreen = () => {
   return (
     <div className="chatScreen">
       <p className="chatScreen__timestamp">
-        YOU MATCHED WITH LABRADOR ON 08/21/2020
+        YOU MATCHED ON 09/10/2021
       </p>
       {messages.map((message) =>
         message.name ? (
