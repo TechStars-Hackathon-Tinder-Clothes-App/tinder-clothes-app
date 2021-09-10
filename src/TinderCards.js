@@ -3,8 +3,15 @@ import TinderCard from "react-tinder-card";
 import "./TinderCards.css";
 import database from "./firebase";
 
-function TinderCards() {
+function TinderCards(props) {
   const [people, setPeople] = useState([]);
+
+  const onSwipe = (direction) => {
+    console.log('You swiped: ' + direction)
+    if (direction === "right") {
+      props.handleOpenModal();
+    }
+  }
 
   useEffect(() => {
     const unsubscribe = database
@@ -26,6 +33,7 @@ function TinderCards() {
             className="swipe"
             key={person.name}
             preventSwipe={["up", "down"]}
+            onSwipe={onSwipe}
           >
             <div
               style={{ backgroundImage: `url(${person.url})`, overflowY: "scroll", overflowWrap: "break-word" }}
