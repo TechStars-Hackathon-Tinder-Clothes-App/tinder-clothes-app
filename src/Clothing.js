@@ -1,11 +1,12 @@
 import React from "react";
-import "./Wardrobe.css";
+import "./Clothing.css";
 import Avatar from "@material-ui/core/Avatar";
 import { Link } from "react-router-dom";
 
-const Wardrobe = ({ size, brand, condition, description }) => {
+const Clothing = ({ size, brand, condition, description }) => {
   return (
-      <div className="wardrobe">
+      <div className="clothing">
+          
         <Avatar className="chat__image" src={profilePic} />
         <div className="chat__details">
           <h2>{name}</h2>
@@ -16,4 +17,4 @@ const Wardrobe = ({ size, brand, condition, description }) => {
   );
 };
 
-export default Wardrobe;
+export default Clothing;
