@@ -12,7 +12,11 @@
 
 .card h3 {
     position: absolute;
-    bottom: 10px;
+    bottom: 1%;
+    color: white;
+}
+
+.card h4 {
     color: white;
 }
 
@@ -25,4 +29,9 @@
 /* stacks cards on top of each other */
 .swipe {
     position: absolute;
+}
+
+.row {
+    margin-top: 5%;
+    color: white;
 }
