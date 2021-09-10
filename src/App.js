@@ -11,6 +11,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import ReactRoundedImage from "react-rounded-image";
 import Paper from "@material-ui/core/Paper";
+import Profile from './Profile.js'
 import { Link, useHistory } from "react-router-dom";
 
 const customStyles = {
