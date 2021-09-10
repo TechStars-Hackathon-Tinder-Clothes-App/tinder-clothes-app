@@ -11,6 +11,7 @@ import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import ReactRoundedImage from "react-rounded-image";
 import Paper from "@material-ui/core/Paper";
+import { Link, useHistory } from "react-router-dom";
 
 const customStyles = {
   content: {
@@ -87,6 +88,7 @@ function App() {
                 />
               </Paper>
 
+              <Link to="/chat">
               <Button
                 onClick={closeModal}
                 style={{
@@ -101,6 +103,7 @@ function App() {
               >
                 Send a message
               </Button>
+              </Link>
               <Button
                 onClick={closeModal}
                 style={{ width: "100%", height: "10%" }}
@@ -110,7 +113,7 @@ function App() {
                 Keep swiping
               </Button>
             </Modal>
-            <TinderCards />
+            <TinderCards handleOpenModal={openModal} />
             <SwipeButtons />
           </Route>
         </Switch>
