@@ -6,6 +6,10 @@ import database from "./firebase";
 function TinderCards() {
   const [people, setPeople] = useState([]);
 
+  const onSwipe = (direction) => {
+    console.log('You swiped: ' + direction)
+  }
+
   useEffect(() => {
     const unsubscribe = database
       .collection("people")
@@ -26,6 +30,7 @@ function TinderCards() {
             className="swipe"
             key={person.name}
             preventSwipe={["up", "down"]}
+            onSwipe={onSwipe}
           >
             <div
               style={{ backgroundImage: `url(${person.url})` }}

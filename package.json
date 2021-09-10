@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.11.0",
+    "@material-ui/core": "^4.12.3",
     "@material-ui/icons": "^4.9.1",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
@@ -11,6 +11,8 @@
     "firebase": "^7.19.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-modal": "^3.14.3",
+    "react-rounded-image": "^2.0.13",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.3",
     "react-tinder-card": "^1.2.0"
